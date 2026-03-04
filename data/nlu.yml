@@ -1,0 +1,257 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey
+      - hey hi
+      - good morning
+      - good evening
+      - good afternoon
+      - hello there
+      - hi there
+      - hey there
+      - what's up
+      - hi bot
+      - hey bot
+      - greetings
+      - welcome
+      - start
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - good bye
+      - goodbye
+      - see you
+      - see you later
+      - talk to you later
+      - have a nice day
+      - farewell
+      - peace
+      - until later
+      - catch you later
+      - talk soon
+      - bye bot
+
+  - intent: affirm
+    examples: |
+      - yes
+      - yeah
+      - y
+      - yup
+      - sure
+      - correct
+      - that's helpful
+      - helpful
+      - good one
+      - that's good
+      - absolutely
+      - for sure
+      - totally
+
+  - intent: deny
+    examples: |
+      - no
+      - nope
+      - n
+      - not really
+      - I don't want that
+      - not at all
+      - negative
+      - don't want this
+      - that's not helpful
+      - not helpful
+
+  - intent: mood_great
+    examples: |
+      - I'm great
+      - feeling great
+      - I feel amazing
+      - fantastic
+      - excellent
+      - wonderful
+      - I'm on top of the world
+      - couldn't be better
+      - excellent day
+      - I feel incredible
+      - life is good
+      - very happy
+
+  - intent: mood_good
+    examples: |
+      - I'm good
+      - feeling good
+      - pretty good
+      - alright
+      - I feel nice
+      - doing okay
+      - not bad
+      - I'm fine
+      - feeling fine
+      - doing well
+
+  - intent: mood_neutral
+    examples: |
+      - I'm okay
+      - neutral
+      - normal
+      - just average
+      - nothing special
+      - same as usual
+      - mid
+      - just okay
+      - could be worse
+
+  - intent: mood_sad
+    examples: |
+      - I'm sad
+      - feeling sad
+      - I feel down
+      - depressed
+      - blue
+      - unhappy
+      - miserable
+      - heartbroken
+      - terrible
+      - awful feeling
+
+  - intent: mood_unhappy
+    examples: |
+      - feeling down
+      - not good
+      - my day was horrible
+      - I don't feel very well
+      - things are tough
+      - having a rough time
+      - not feeling it
+      - bummed out
+      - discouraged
+      - low
+
+  - intent: mood_stressed
+    examples: |
+      - I'm stressed
+      - feeling stressed
+      - I feel overwhelmed
+      - too much pressure
+      - can't handle this
+      - stressed out
+      - overwhelmed
+      - burdened
+      - tense
+      - anxiety is high
+
+  - intent: mood_anxious
+    examples: |
+      - I'm anxious
+      - feeling anxious
+      - worried
+      - nervous
+      - scared
+      - fearful
+      - uneasy
+      - don't feel confident
+      - I'm uptight
+      - jittery
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you human?
+      - am I speaking to a bot?
+      - are you real?
+      - what are you?
+      - are you AI?
+      - bot or human?
+
+  - intent: ask_help
+    examples: |
+      - help me
+      - I need help
+      - can you help
+      - help please
+      - assist me
+      - I need support
+      - what can you do
+      - how can you help
+
+  - intent: motivation
+    examples: |
+      - motivate me
+      - I need motivation
+      - give me a motivational quote
+      - motivational quote please
+      - I need to be motivated
+      - boost my motivation
+      - motivate me please
+      - I need a push
+      - inspire my work
+      - get me pumped
+
+  - intent: inspiration
+    examples: |
+      - inspire me
+      - I need inspiration
+      - inspirational quote please
+      - give me inspiration
+      - I want inspiration
+      - insprirational
+      - I feel uninspired
+      - inspirational words
+      - give me hope
+      - motivate my dreams
+      - inspirational quote please
+      - I want inspiration
+      - inspirational words
+      - give me inspiration
+      - need some hope
+      - inspire my dreams
+
+  - intent: love
+    examples: |
+      - love quotes
+      - tell me a love quote
+      - romantic quote please
+      - give me something romantic
+      - love matters
+      - romantic quotes
+      - quotes about relationships
+      - tell me about love
+
+  - intent: success
+    examples: |
+      - success quotes
+      - motivate me for success
+      - give me a success quote
+      - quotes about success
+      - how to succeed
+      - success tips
+      - achieve success
+      - accomplish goals
+
+  - intent: funny
+    examples: |
+      - tell me a funny quote
+      - make me laugh
+      - I need a laugh
+      - funny quote please
+      - humor please
+      - something funny
+      - make me smile
+      - tell me a joke
+      - lighten the mood
+
+  - lookup: quote_types
+    examples: |
+      - motivation
+      - motivational
+      - inspiration
+      - inspirational
+      - love
+      - success
+      - funny
+      - humor
+      - joke

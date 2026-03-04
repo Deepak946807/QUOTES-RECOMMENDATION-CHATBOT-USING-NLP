@@ -1,0 +1,283 @@
+﻿version: "3.1"
+
+stories:
+  - story: happy greeting path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: greeting with good mood
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_good
+      - action: utter_mood_check
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: greeting with neutral mood
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_neutral
+      - action: utter_mood_check
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: greeting then sad mood
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_sad
+      - action: utter_sad
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: greeting then unhappy mood
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: greeting then stressed mood
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_stressed
+      - action: utter_stressed
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: greeting then anxious mood
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_anxious
+      - action: utter_anxious
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: motivation request
+    steps:
+      - intent: greet
+      - action: utter_ask
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: motivation request denied
+    steps:
+      - intent: greet
+      - action: utter_ask
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_helpful
+      - intent: deny
+      - action: utter_ask
+
+  - story: inspiration request
+    steps:
+      - intent: greet
+      - action: utter_ask
+      - intent: inspiration
+      - action: utter_inspiration
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: inspiration request denied
+    steps:
+      - intent: greet
+      - action: utter_ask
+      - intent: inspiration
+      - action: utter_inspiration
+      - action: utter_helpful
+      - intent: deny
+      - action: utter_ask
+
+  - story: love quotes
+    steps:
+      - intent: greet
+      - action: utter_ask
+      - intent: love
+      - action: utter_love
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: love quotes denied
+    steps:
+      - intent: greet
+      - action: utter_ask
+      - intent: love
+      - action: utter_love
+      - action: utter_helpful
+      - intent: deny
+      - action: utter_ask
+
+  - story: success quotes
+    steps:
+      - intent: greet
+      - action: utter_ask
+      - intent: success
+      - action: utter_success
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: success quotes denied
+    steps:
+      - intent: greet
+      - action: utter_ask
+      - intent: success
+      - action: utter_success
+      - action: utter_helpful
+      - intent: deny
+      - action: utter_ask
+
+  - story: funny quotes
+    steps:
+      - intent: greet
+      - action: utter_ask
+      - intent: funny
+      - action: utter_funny
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: funny quotes denied
+    steps:
+      - intent: greet
+      - action: utter_ask
+      - intent: funny
+      - action: utter_funny
+      - action: utter_helpful
+      - intent: deny
+      - action: utter_ask
+
+  # direct quote paths (no greeting)
+  - story: motivation request direct
+    steps:
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: motivation request denied direct
+    steps:
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_helpful
+      - intent: deny
+      - action: utter_ask
+
+  - story: inspiration request direct
+    steps:
+      - intent: inspiration
+      - action: utter_inspiration
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: inspiration request denied direct
+    steps:
+      - intent: inspiration
+      - action: utter_inspiration
+      - action: utter_helpful
+      - intent: deny
+      - action: utter_ask
+
+  - story: love request direct
+    steps:
+      - intent: love
+      - action: utter_love
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: love request denied direct
+    steps:
+      - intent: love
+      - action: utter_love
+      - action: utter_helpful
+      - intent: deny
+      - action: utter_ask
+
+  - story: success request direct
+    steps:
+      - intent: success
+      - action: utter_success
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: success request denied direct
+    steps:
+      - intent: success
+      - action: utter_success
+      - action: utter_helpful
+      - intent: deny
+      - action: utter_ask
+
+  - story: funny request direct
+    steps:
+      - intent: funny
+      - action: utter_funny
+      - action: utter_helpful
+      - intent: affirm
+      - action: utter_happy
+
+  - story: funny request denied direct
+    steps:
+      - intent: funny
+      - action: utter_funny
+      - action: utter_helpful
+      - intent: deny
+      - action: utter_ask
+
+  - story: goodbye
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: direct goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: bot challenge
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - story: help request
+    steps:
+      - intent: ask_help
+      - action: utter_ask

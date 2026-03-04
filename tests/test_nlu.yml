@@ -1,0 +1,54 @@
+version: "3.1"
+
+nlu:
+  - intent: motivation
+    examples: |
+      - motivate me
+      - I need motivation
+      - give me a motivational quote
+
+  - intent: inspiration
+    examples: |
+      - inspire me
+      - inspirational quote please
+      - I need inspiration
+
+  - intent: love
+    examples: |
+      - tell me a love quote
+      - romantic quote
+
+  - intent: success
+    examples: |
+      - success quotes
+      - give me a success quote
+
+  - intent: funny
+    examples: |
+      - funny quote please
+      - make me laugh
+
+  - intent: greet
+    examples: |
+      - hello
+      - hi
+
+  - intent: affirm
+    examples: |
+      - yes
+      - sure
+
+  - intent: deny
+    examples: |
+      - no
+      - nope
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - see you
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you human?

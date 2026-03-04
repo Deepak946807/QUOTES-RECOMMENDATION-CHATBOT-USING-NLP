@@ -1,0 +1,39 @@
+﻿recipe: default.v1
+
+assistant_id: 20260303-151044-intractable-cymbal
+
+language: en
+
+# Explicit NLU pipeline tuned for short chat utterances
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+  - name: FallbackClassifier
+    # raise threshold to avoid misclassifying unrelated input as one of our intents
+    threshold: 0.4
+    ambiguity_threshold: 0.1
+
+# Policies for the Core model
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+#  - name: UnexpecTEDIntentPolicy
+#    max_history: 5
+#    epochs: 150
+#    # require a stronger signal before treating as unlikely intent
+#    layer_sizes: [256, 256]

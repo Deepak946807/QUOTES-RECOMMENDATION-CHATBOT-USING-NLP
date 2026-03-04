@@ -1,0 +1,91 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Help request
+    steps:
+      - intent: ask_help
+      - action: utter_ask
+
+  - rule: Handle mood great
+    steps:
+      - intent: mood_great
+      - action: utter_happy
+
+  - rule: Handle mood good
+    steps:
+      - intent: mood_good
+      - action: utter_mood_check
+
+  - rule: Handle mood neutral
+    steps:
+      - intent: mood_neutral
+      - action: utter_mood_check
+
+  - rule: Handle mood sad
+    steps:
+      - intent: mood_sad
+      - action: utter_sad
+      - action: utter_helpful
+
+  - rule: Handle mood unhappy
+    steps:
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+
+  - rule: Handle mood stressed
+    steps:
+      - intent: mood_stressed
+      - action: utter_stressed
+      - action: utter_helpful
+
+  - rule: Handle mood anxious
+    steps:
+      - intent: mood_anxious
+      - action: utter_anxious
+      - action: utter_helpful
+
+  - rule: Deliver motivation quote
+    steps:
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_helpful
+
+  - rule: Deliver inspiration quote
+    steps:
+      - intent: inspiration
+      - action: utter_inspiration
+      - action: utter_helpful
+
+  - rule: Deliver love quote
+    steps:
+      - intent: love
+      - action: utter_love
+      - action: utter_helpful
+
+  - rule: Deliver success quote
+    steps:
+      - intent: success
+      - action: utter_success
+      - action: utter_helpful
+
+  - rule: Deliver funny quote
+    steps:
+      - intent: funny
+      - action: utter_funny
+      - action: utter_helpful
+
+  - rule: User affirmed (positive feedback)
+    steps:
+      - intent: affirm
+      - action: utter_happy

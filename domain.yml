@@ -1,0 +1,145 @@
+﻿version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_good
+  - mood_neutral
+  - mood_sad
+  - mood_unhappy
+  - mood_stressed
+  - mood_anxious
+  - bot_challenge
+  - motivation
+  - inspiration
+  - love
+  - success
+  - funny
+  - ask_help
+
+entities:
+  - mood
+  - quote_type
+
+slots:
+  mood:
+    type: text
+    mappings:
+      - type: from_intent
+        intent: mood_great
+        value: "great"
+      - type: from_intent
+        intent: mood_good
+        value: "good"
+      - type: from_intent
+        intent: mood_neutral
+        value: "neutral"
+      - type: from_intent
+        intent: mood_sad
+        value: "sad"
+      - type: from_intent
+        intent: mood_unhappy
+        value: "unhappy"
+      - type: from_intent
+        intent: mood_stressed
+        value: "stressed"
+      - type: from_intent
+        intent: mood_anxious
+        value: "anxious"
+      - type: from_text
+        intent: mood_great
+  user_name:
+    type: text
+    mappings:
+      - type: from_text
+
+  used_quotes:
+    type: list
+    influence_conversation: false
+    mappings: []
+
+actions:
+  - action_deliver_motivation
+  - action_deliver_inspiration
+  - action_deliver_love
+  - action_deliver_success
+  - action_deliver_funny
+  - action_mood_based_recommendation
+
+responses:
+  utter_greet:
+    - text: "Hey there! 👋 Welcome to your Quotes Recommendation Bot. How are you feeling today? (e.g., great, good, sad, stressed, anxious)"
+
+  utter_ask:
+    - text: "I can help you with quotes on motivation, inspiration, love, success, or humor. What would you like today?"
+    - text: "What kind of quotes interest you? I have motivational, inspirational, love, success, and funny quotes!"
+
+  utter_mood_check:
+    - text: "I see you're feeling {mood}. Let me recommend some quotes to help brighten your day!"
+    - text: "Thanks for sharing! Based on your mood, I have some perfect quotes for you."
+
+  utter_cheer_up:
+    - text: "Here's something to cheer you up 💪:"
+
+  utter_did_that_help:
+    - text: "Did that quote help you? Feel free to ask for more!"
+    - text: "Did you find that helpful? Would you like another?"
+
+  utter_happy:
+    - text: "That's wonderful! Your happiness means a lot to me. 😊 Would you like more quotes?"
+    - text: "Thanks for the feedback! Would you like to explore other types of quotes?"
+
+  utter_sad:
+    - text: "I'm here to help. Let me share some uplifting quotes to brighten your mood."
+    - text: "Don't worry, I have some wonderful quotes to inspire you! 💫"
+
+  utter_stressed:
+    - text: "I understand you're going through a stressful time. Here are some calming and motivational quotes for you."
+    - text: "Take a breath - here are some quotes to help you find peace and strength."
+
+  utter_anxious:
+    - text: "Anxiety is temporary. Let me share some empowering quotes to help you feel better."
+    - text: "Here are some supportive quotes to ease your mind."
+
+  utter_goodbye:
+    - text: "Goodbye! Remember, every day is a new opportunity. Stay positive! 🌟"
+    - text: "See you later! Keep believing in yourself! 💪"
+
+  utter_iamabot:
+    - text: "I am a Quotes Recommendation Bot powered by Rasa. I'm here to inspire and motivate you!"
+
+  utter_helpful:
+    - text: "Was that helpful? Just reply 'yes' or 'no'!"
+    - text: "Did that resonate with you? (yes/no)"
+
+  utter_motivation:
+    - text: "The only way to do great work is to love what you do. - Steve Jobs"
+    - text: "Success is not final, failure is not fatal: it is the courage to continue that counts. - Winston Churchill"
+    - text: "Believe you can and you are halfway there. - Theodore Roosevelt"
+
+  utter_inspiration:
+    - text: "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt"
+    - text: "It does not matter how slowly you go as long as you do not stop. - Confucius"
+    - text: "You are capable of amazing things. - Unknown"
+
+  utter_love:
+    - text: "The heart has its reasons which reason knows nothing of. - Blaise Pascal"
+    - text: "To love oneself is the beginning of a lifelong romance. - Oscar Wilde"
+    - text: "The greatest happiness of life is the conviction that we are loved. - Victor Hugo"
+
+  utter_success:
+    - text: "Success is walking from failure to failure with no loss of enthusiasm. - Winston Churchill"
+    - text: "The only impossible journey is the one you never begin. - Tony Robbins"
+    - text: "Success is not about being the best, it is about being better than you were yesterday. - Unknown"
+
+  utter_funny:
+    - text: "I told my computer I needed a break, and now it wont stop sending me Kit-Kat ads. - Unknown"
+    - text: "Why did the scarecrow win an award? Because he was outstanding in his field! - Unknown"
+    - text: "I am not lazy, I am just on energy-saving mode. - Unknown"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

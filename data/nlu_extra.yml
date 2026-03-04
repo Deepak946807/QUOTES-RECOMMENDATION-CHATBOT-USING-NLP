@@ -1,0 +1,104 @@
+version: "3.1"
+
+nlu:
+  - intent: motivation
+    examples: |
+      - I need a push to get to work
+      - Give me something to get motivated
+      - Help me get going
+      - Send a motivational quote
+      - I need energy to start
+      - How can I stay motivated?
+      - Motivation please
+      - Give me a pep talk
+      - I need a boost right now
+      - Something to fire up my motivation
+      - I'm struggling to stay motivated
+      - Words to motivate me
+
+  - intent: inspiration
+    examples: |
+      - I want something inspiring
+      - Share an inspirational quote
+      - I need to feel inspired
+      - Inspire me with a story or quote
+      - Give me something uplifting
+      - I need new ideas and inspiration
+      - Inspirational please
+      - Hit me with inspiration
+      - I feel stuck, inspire me
+      - Something to lift my spirits
+
+  - intent: love
+    examples: |
+      - I want a romantic line
+      - Tell me sweet love words
+      - Give me a quote about love
+      - Something about love and romance
+      - A quote to share with my partner
+      - Love me some love quotes
+      - Romantic phrase please
+      - Words for my loved one
+      - Heartfelt love quote
+      - Cute love quote
+
+  - intent: success
+    examples: |
+      - I want success motivation
+      - Share a quote about achieving goals
+      - How to stay on track for success
+      - Success quote please
+      - Inspire success in me
+      - Words about success and achievement
+      - Make me think about success
+      - Quotes for entrepreneurs
+      - Tips for success (quote)
+      - Drive me to succeed
+
+  - intent: funny
+    examples: |
+      - Tell me something funny
+      - Make me smile with a quote
+      - Funny one-liner or quote
+      - I need a joke or funny quote
+      - Cheer me up with humor
+      - A humorous quote please
+      - Quirky funny quote
+      - Light-hearted funny line
+      - Something that'll make me laugh
+      - Give me a witty quote
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot
+      - you are a robot right
+      - is this an automated reply
+      - are you human or bot
+
+  - intent: greet
+    examples: |
+      - good to see you
+      - hi there friend
+      - hello friend
+      - hey how are you
+
+  - intent: affirm
+    examples: |
+      - absolutely
+      - sure thing
+      - sounds good
+      - that works
+
+  - intent: deny
+    examples: |
+      - not now
+      - maybe later
+      - I'd rather not
+      - no thanks
+
+  - intent: goodbye
+    examples: |
+      - catch you later
+      - bye bye
+      - take care
+      - talk soon
